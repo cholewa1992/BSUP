@@ -1,0 +1,24 @@
+Estimering
+Planlægning
+Valg af process model
+projekt styring
+	Vedligehold af process model
+	team management
+	
+
+Our target project is the project performed by ourselves for the ITU course 
+Second Year Project: Software Development in Large Teams with International Collaboration.
+In this project we are to collaborate with a team of students from Singapore University
+developing a computer system for uploading and downloading resources. The system will have two
+individual frontends with a shared backend. In addition we are required to document the design
+of the system as well as our collaboration with the singaporian students.	
+
+In this project we aim to clarify the following questions in regards to the target project.
+	
+How can you plan, execute and evaluate the target project?
+	How can you estimate the time required for each of the subtasks of the target project?
+	How can you balance estimated time with available time
+	to reach a satisfying product by the set deadline?
+	How can you choose a fitting process model for the target project?
+	How can you manage resources and keep the target project on track?
+	Which parts of the target project could have been done differently for a better result?
