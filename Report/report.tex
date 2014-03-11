@@ -1,0 +1,54 @@
+\documentclass{report}
+\usepackage{subfiles}
+\usepackage[latin1]{inputenc}
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage{tabularx}
+\usepackage{float}
+\usepackage{color}
+\usepackage{enumitem}
+\usepackage{nameref}
+\usepackage{caption}
+\usepackage{pdflscape}
+\usepackage{geometry}
+
+\makeatletter
+
+\def\twodigits#1{\expandafter\two@digits\csname c@#1\endcsname}
+
+\AddEnumerateCounter\twodigits\two@digits{01}
+
+\makeatother
+
+
+\fancyfoot[OC]{\textit{\thepage}}
+
+\title{Sample title}
+\date{\today}
+\author{Asbj\o rn Fjelbro Steffensen (afjs@itu.dk)\\ Thomas Stoy Dragsb\ae k (thst@itu.dk)\\ Nicki Hjorth J\o rgensen (nhjo@itu.dk)\\ Jacob Benjamin Cholewa (jbec@itu.dk)\\ Jakob Merrild (jmer@itu.dk)\\ Mathias Kindsholm Pedersen (mkin@itu.dk)}
+
+\begin{document}
+
+\maketitle
+\newpage
+\tableofcontents
+\newpage
+
+\chapter{Introduction}
+\subfile{tex/problemstatement.tex}
+
+\chapter{Estimating}
+
+\chapter{Activity planning}
+
+\chapter{Process models}
+
+\chapter{Discussion}
+
+\chapter{Conclusion}
+
+
+\end{document}
