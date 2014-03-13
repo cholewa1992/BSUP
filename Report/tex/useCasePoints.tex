@@ -1,0 +1,24 @@
+Use Case Points(UCP) is a method of estimating the size of software projects. The idea of the method is to assign a complexity to each of the use cases that defines the functionality of the  program to be developed, this is called the Unadjusted Use Case Points(UUCP) for that use case. The UUCP of a use case is defined by the number of transactions in the use case. Furthermore a value is assigned for each actor which is going to interact with the system, called the Unadjusted Actor Points(UAP). These values are added together and further multiplied by factors which represent the technical requirements for the system, the Technical Complexity Factor(TCF), and the composition of the team, the Enviromental Complexity Factor(ECF). The complete calculation is as follows: \[UCP = (UAP + UUCP)*TCF*ECF\] 
+
+Applying this to the target project we look at the different use cases that define the system to be developed. 
+\begin{table}[!h] 
+\begin{tabular}{|c|c|c|}
+\hline Use Case & Number of transactions & UUCP  \\ 
+\hline UC-01 & 4 & 10  \\ 
+\hline UC-02 & 6 & 10 \\
+\hline UC-03 & 6 & 10 \\
+\hline UC-04 & 3 & 5 \\
+\hline UC-05 & 4 & 10 \\
+\hline UC-06 & 3 & 5 \\
+\hline UC-07 & 4 & 10 \\
+\hline UC-08 & 3 & 5 \\
+\hline UC-09 & 3 & 5 \\
+\hline UC-10 & 3 & 5 \\
+\hline UC-11 & 3 & 5 \\
+\hline
+\end{tabular}
+\caption{} \label{tab:UUCP}
+\end{table}
+
+The sum of the UUCP in \textit{Table \ref{tab:UUCP}} is 80, additionally the UAP is 9 because there are 3 different human actors. 
+//Calculate TCF and ECF to arrive at the final UCP.
