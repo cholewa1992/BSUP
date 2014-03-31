@@ -1,3 +1,17 @@
+\documentclass[../report.tex]{subfiles}
+\begin{document}
+Use Case Points(UCP) er en metode til at estimere størrelsen af software projekter. Metoden bygger på en række forskellige målbare tal som jeg vil angive med følgende forkortelser:
+\begin{itemize}
+\item UUCP - Unadjusted Use Case Points, den rå score for alle use cases.
+\item UAP - Unadjusted Actor Points, den rå score for alle actors.
+\item TCF - Technical Complexity Factor, en faktor der siger noget om systemet tekniske compleksitet.
+\item ECF - Environmental Complexity Factor, en faktor der siger noget om compleksiteten af det miljø systemet bliver udviklet i.
+\item UCP - Use Case Points, den samlede score for estimeringen.
+\end{itemize}
+Når man har beregnet de fire første kan man beregne UCP ud fra følgende formel:\[UCP = (UAP + UUCP)*TCF*ECF\]
+
+man tildeler en compleksitet til hver use cases som beskriver funktionaliteten af det system der skal udvikles. 
+
 Use Case Points(UCP) is a method of estimating the size of software projects. The idea of the method is to assign a complexity to each of the use cases that defines the functionality of the  program to be developed, this is called the Unadjusted Use Case Points(UUCP) for that use case. The UUCP of a use case is defined by the number of transactions in the use case. Furthermore a value is assigned for each actor which is going to interact with the system, called the Unadjusted Actor Points(UAP). These values are added together and further multiplied by factors which represent the technical requirements for the system, the Technical Complexity Factor(TCF), and the composition of the team, the Enviromental Complexity Factor(ECF). The complete calculation is as follows: \[UCP = (UAP + UUCP)*TCF*ECF\] 
 
 Applying this to the target project we look at the different use cases that define the system to be developed. 
@@ -22,3 +36,4 @@ Applying this to the target project we look at the different use cases that defi
 
 The sum of the UUCP in \textit{Table \ref{tab:UUCP}} is 80, additionally the UAP is 9 because there are 3 different human actors. 
 //Calculate TCF and ECF to arrive at the final UCP.
+\end{document}
