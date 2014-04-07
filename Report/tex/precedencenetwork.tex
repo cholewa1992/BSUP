@@ -2,39 +2,45 @@
 \begin{document}
 \graphicspath{{img/}{../img/}}
 
-\section{The precedence network}
+\section{Precedence network}
 %Which question does this cover / introduction
-In order to examine how to balance estimated time with available time to reach a satisfying product by a set deadline, different methods for planning will be investigated. This section will cover The Precedence Network, which is a method for planning a project's activities and their relation.
+For at kunne besvare spørgsmålet om hvordan man balancerer den estimerede tid med den tid, der er til rådighed, for at nå frem til et tilfredsstillende produkt til en fastsat deadline, vil forskellige metoder for planlægning blive undersøgt. Dette afsnit vil omhandle The Precedence Network, som er en metode, der bruges til at planlægge et projekts aktiviteter og deres relationer. 
 
-The Precedence Network represents activities as nodes and the links between these nodes represent precedence requirements. Each activity has a duration, and time flows from left to right. This allows us to perform the \textit{forward pass} and the \textit{backward pass} in order to identify the \textit{critical path}.
+The Precedence Network repræsenterer aktiviteter som knuder og forbindelserne mellem disse knuder repræsenterer krav til rækkefølgen. Hver aktivitet har en varighed og tiden flyder fra venstre mod højre. Det gør, at vi kan udføre det \textit{forlæns gennemløb} og det \textit{baglæns gennemløb} for at kunne identificere den \textit{kritiske sti}.
 
 	%Identify activities (WBS)
-In the activity-based approach all activities that the project is thought to involve are identified. Each activity is estimated before adding it to a node. For now the node only has a \textbf{duration} and a \textbf{label} describing the activity.
+I den aktivitets-baserede tilgang findes først alle aktiviteter, som projektet menes at indeholde. Hver aktivitet estimeres inden den tilføjes til en knude. Dermed har knuden på nuværende tidspunkt en \textbf{varighed} og en \textbf{etiket}, der beskriver aktiviteten.
 
 	%Build the network
 \begin{figure}[H]
 \centering
 	\includegraphics[scale=0.12]{networkNode.png}
-\caption{A node in the network}
+\caption{En knude i netværket}
 \end{figure}
 
-Once every activity has been added to a node, the precedence network is created by placing the nodes (activities) in the order of which they are to occur with lines between for representing their dependencies.
+Når hver aktivitet er repræsenteret af en knude, placeres knuderne i den rækkefølge de forventes at blive udført. Forbindelserne mellem knuderne viser afhængighederne. Dette udgør The Precedence Network.
 
 	%The forward pass
-At this point, the \textit{forward pass} can be executed. This is done by following every path from the start node to the finish node. The \textbf{earliest start} is calculated and filled out by summing up the duration of all prior activities (note that some activities can be executed in parallel, and in this case only the activity with the highest duration is added) while the \textbf{earliest finish} is calculated by adding the current activity's duration to the earliest start.
+På nuværende tidspunkt kan det \textit{forlæns gennemløb} udføres. Det gøres ved at følge hver sti fra start knuden til slut knuden. Den \textbf{tidligste start} udregnes og udfyldes ved at summere varighederne fra alle tidligere aktiviteter (bemærk at nogle aktiviteter kan udføres parallelt - i dette tilfælde medregnes kun den aktivitet med længst varighed) mens den \textbf{tidligste afslutning} udregnes ved at addere den enkelte aktivitets varighed med den tidligste start.
 
 	%The backward pass
-The \textit{backward pass} is, as the name suggests, the opposite. The path from the finish node to the start node is followed, and the \textbf{latest finish} is found by setting the finish node's latest finish to the same as the earliest finish and moving backward. The \textbf{latest start} is found by subtracting the duration of an activity from the latest finish.
+Det baglæns gennemløb er, som navnet antyder, det modsatte. Alle stier fra slut til start følges, og den \textbf{seneste afslutning} findes ved at sætte slut-knudens seneste afslutning til sammes tidligste afslutning og bevæge sig baglæns gennem netværket. Den \textbf{seneste start} findes ved at trække den enkelte aktivitets varighed fra den tidligste afslutning.
 
-The \textbf{float} is the difference between the earliest start and the latest start of a node. This means that if the float is 0, the activity is critical and any delay in the activity will cause a delay of the entire project.
+\textbf{Slækket} er forskellen mellem den tidligste start og den tidligste afslutning af en knude. Det betyder at, hvis slækket er 0, er aktiviteten kritisk og enhver forsinkelse i aktiviteten vil medføre en forsinkelse i hele projektet.  
 
 	%Identify the critical path
-The critical path is the path in the precedence network where all activities on the path have a float of 0. 
+Den kritiske sti er stien i netværket, hvor alle aktiviteter på stien har et slæk på 0.
 
 	%A precedence network of our project
-//Insert a precedence network of our target project
+\begin{landscape}
+\begin{figure}[H]
+\centering
+	\includegraphics[scale=0.23]{PrecedenceNetworkBSUP.png}
+\caption{Aktivitets-baseret Precedence Network over kurset BNDN}
+\end{figure}
+\end{landscape}
 
 %Comparison
-//Compare this with other planning tools
+//Sammenlign med andre planlægningsværktøjer
 
 \end{document}
