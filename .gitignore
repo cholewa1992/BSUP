@@ -32,3 +32,6 @@
 *.xdy
 *.tdo
 *.pdf
+
+#White listing#
+!Report/img/*.pdf
