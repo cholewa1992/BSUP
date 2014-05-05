@@ -15,12 +15,25 @@
 \usepackage{pdflscape}
 \usepackage{tabularx}
 \usepackage{geometry}
+\usepackage{titlesec, blindtext, color}
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+\makeatletter
+\newif\if@right
+\def\shadequote{\@righttrue\shadequote@i}
+\def\shadequote@i{\begin{snugshade}\begin{quote}\openquote}
+\def\endshadequote{%
+  \if@right\hfill\fi\closequote\end{quote}\end{snugshade}}
+\@namedef{shadequote*}{\@rightfalse\shadequote@i}
+\@namedef{endshadequote*}{\endshadequote}
 
 \makeatletter
 
 \def\twodigits#1{\expandafter\two@digits\csname c@#1\endcsname}
 
 \AddEnumerateCounter\twodigits\two@digits{01}
+
 
 \makeatother
 
@@ -49,8 +62,16 @@
 \subfile{tex/useCasePoints.tex}
 
 \chapter{Aktivitetsplanlægning}
+I dette kapitel kigges der på emner relevante for at svarer på første spørgsmål i problemformuleringen \\
+
+\textit{1. Hvordan kan man planlægge et eksamensprojekt godt?}\\
+
+\noindent Først ved at kigge på planlægningen udført i target projektet og derefter på Procedence network som alternativ
+
 %Gantt chart in project
 %The precedence network
+\subfile{tex/gantt.tex}
+
 \subfile{tex/precedencenetwork.tex}
 
 \subfile{tex/productBreakdown.tex}
