@@ -1,7 +1,8 @@
 \documentclass[../report.tex]{subfiles}
 \begin{document}
 \section{Use Case Points}
-Use Case Points(UCP)\footnote{http://www.codeproject.com/Articles/9913/Project-Estimation-with-Use-Case-Points http://en.wikipedia.org/wiki/Use\_Case\_Points} er en metode til at estimere størrelsen af software projekter. Metoden bygger på en række forskellige målbare tal som vil blive angivet med følgende forkortelser:
+
+Use Case Points(UCP)\footnote{\url{{http://www.cs.cmu.edu/~jhm/Readings/Cohn\%20-\%20Estimating\%20with\%20Use\%20Case\%20Points\_v2\%2012-24-50-761.pdf}} er en metode til at estimere størrelsen af software projekter. Metoden bygger på en række forskellige målbare tal som vil blive angivet med følgende forkortelser:
 \begin{itemize}
 \item UUCP - Unadjusted Use Case Points, den rå score for alle use cases.
 \item UAP - Unadjusted Actor Points, den rå score for alle actors.
@@ -24,12 +25,13 @@ For at beregne UAP tildeler man hver enkelt actor en score baseret på om det er:
 Den samlede UAP score er summen af de tildelte point.
 
 \subsection{TCF}
-Når man beregner TCF kigger man på 13 forskellige tekniske aspekter\footnote{For en fuld liste over hvilke faktorer der kigges på, se appendix.} af systemet der skal udvikles, bl.a. hvor nemt det skal være at vedligeholde, om det skal være distribueret og hvor stor vægt der skal lægges på sikkerhed. Hver af disse faktorer har en medfødt sværhedsgrad. 
+Når man beregner TCF kigger man på 13 forskellige tekniske aspekter\footnote{For en fuld liste over hvilke faktorer der kigges på, se appendix.} af systemet der skal udvikles, bl.a. hvor nemt det skal være at vedligeholde, om det skal være distribueret og hvor stor vægt der skal lægges på sikkerhed. Hver af disse faktorer har en medfødt sværhedsgrad, som fx 2,0 for et distribueret system. Denne sværhedsgrad ganges med en faktor mellem 0 og 5 baseret på hvor vigtigt det individuelle tekniske aspekt er for systemet, hvor 0 betyder at aspektet er irrelevant for systemet, og 5 betyder at aspektet har høj relevans for systemet. Når man har vægtet alle 13 aspekter kan man summere den score man får(TF) og beregne TCF på følgende måde: \[TCF = (0,6 + \frac{TF}{100})\]
 \subsection{ECF}
-
-\subsection{Vores target-projekt}
-I målprojektet er der defineret 11 use cases og de kan tildeles UUCP som vist på \ref{tab:UUCP}.
+ECF beregnes på en måde tilsvarende TCF. Her kigger man dog på miljømæssige faktorer i stedet for tekniske. Dette inkluderer faktorer som hvor bekendte udviklerne er med UML, hvor stabile kravene til systemet er og hvor 
+\subsection{UCP i target-projektet}
+I target-projektet er der defineret 11 use cases og de kan tildeles UUCP som vist på tabel \ref{tab:UUCP}. Summen af UUCP  er altså 80.
 \begin{table}[!h] 
+\centering
 \begin{tabular}{|c|c|c|}
 \hline Use Case & Antal af transaktioner & UUCP  \\ 
 \hline UC-01 & 4 & 10  \\ 
@@ -47,7 +49,6 @@ I målprojektet er der defineret 11 use cases og de kan tildeles UUCP som vist på
 \end{tabular}
 \caption{} \label{tab:UUCP}
 \end{table}
-Summen af UUCP  er altså 80.
 
 Ligeledes kan man tildele en samlet UAP på 9 da der er 3 forskellige menneskelige actors.
 
