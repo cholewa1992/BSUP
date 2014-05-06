@@ -6,7 +6,7 @@
 %Which question does this cover / introduction
 For at kunne besvare spørgsmålet om hvordan man balancerer den estimerede tid med den tid, der er til rådighed, for at nå frem til et tilfredsstillende produkt til en fastsat deadline, vil forskellige metoder for planlægning blive undersøgt. Dette afsnit vil omhandle The Precedence Network, som er en metode, der bruges til at planlægge et projekts aktiviteter og deres relationer. 
 
-The Precedence Network repræsenterer aktiviteter som knuder mens forbindelserne mellem disse knuder repræsenterer krav til rækkefølgen. Hver aktivitet har en varighed og tiden flyder fra venstre mod højre. Det gør det muligt at udføre det \textit{forlæns gennemløb}, hvor \textbf{tidligste start} og \textbf{tidligste slut} udregnes. Herefter kan det \textit{baglæns gennemløb}, hvor \textbf{seneste afslutning} og \textbf{seneste start} udregnes, udføres. Ud fra disse gennemløb, er det muligt at identificere den \textit{kritiske sti}. \cite[p.~139-151]{hughescotterell09}
+The Precedence Network repræsenterer aktiviteter som knuder, mens forbindelserne mellem disse knuder repræsenterer krav til rækkefølgen. Hver aktivitet har en varighed, og tiden flyder fra venstre mod højre. Det gør det muligt at udføre det \textit{forlæns gennemløb}, hvor \textbf{tidligste start} og \textbf{tidligste slut} udregnes. Herefter kan det \textit{baglæns gennemløb}, hvor \textbf{seneste afslutning} og \textbf{seneste start} udregnes, udføres. Ud fra disse gennemløb, er det muligt at identificere den \textit{kritiske sti}. \cite[p.~139-151]{hughescotterell09}
 
 	%Identify activities (WBS)
 I den aktivitets-baserede tilgang findes først alle aktiviteter, som projektet menes at indeholde. Hver aktivitet estimeres inden den tilføjes til en knude. Dermed har knuden på nuværende tidspunkt en \textbf{varighed} og en \textbf{etiket}, der beskriver aktiviteten. Figur~\ref{fig:precedencenode} viser et eksempel på en knude i netværket.
@@ -26,7 +26,7 @@ Når hver aktivitet er repræsenteret af en knude, placeres knuderne i den rækkefø
 %	%The backward pass
 %Det baglæns gennemløb er, som navnet antyder, det modsatte. Alle stier fra slut til start følges, og den \textbf{seneste afslutning} findes ved at sætte slut-knudens seneste afslutning til sammes tidligste afslutning og bevæge sig baglæns gennem netværket. Den \textbf{seneste start} findes ved at trække den enkelte aktivitets varighed fra den tidligste afslutning.
 
-\textbf{Slækket} er forskellen mellem den tidligste start og den tidligste afslutning af en knude. Det betyder at, hvis slækket er 0, er aktiviteten kritisk og enhver forsinkelse i aktiviteten vil medføre en forsinkelse i hele projektet.  
+\textbf{Slækket} er forskellen mellem den tidligste start og den tidligste afslutning af en knude. Det betyder, at hvis slækket er 0, er aktiviteten kritisk og enhver forsinkelse i aktiviteten vil medføre en forsinkelse i hele projektet.  
 
 	%Identify the critical path
 Den kritiske sti er stien i netværket, hvor alle aktiviteter på stien har et slæk på 0. Som det ses af precedence network diagrammet i figur~\ref{fig:precedencenetwork}, indeholder den kritiske sti (markeret med rød) kun aktiviteter, hvor slækket er netop 0. Den kritiske sti i target-projektet indeholder følgende aktiviteter:
