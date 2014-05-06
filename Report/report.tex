@@ -18,6 +18,8 @@
 \usepackage{url}
 \usepackage{hyperref}
 
+\newcommand\todo[1]{\textcolor{red}{TODO: }#1\PackageWarning{TODO:}{TODO tag!!}}
+
 \makeatletter
 
 \def\twodigits#1{\expandafter\two@digits\csname c@#1\endcsname}
@@ -46,7 +48,7 @@
 \restoregeometry
 
 \chapter{Estimering}
-%Delphi in project
+\subfile{tex/planningpoker.tex}
 %Function Points
 \subfile{tex/useCasePoints.tex}
 
