@@ -18,7 +18,27 @@ Planlægnings poker, eller scrum poker, bygger på delphi metoden. Grupper laver b
 
 Grunden til at bruge fibonacci talrække i steder for at estimere i timer er, at det ofte forvirrer at estimerer i timer hvorimod en relativ enhed er nemmere af forholde sig til. Ved adskillelse har man også bedre mulighed for at måle velocity, antal point pr timer, hvilket er relevant hvis man ønsker at måle på en gruppes produktivitet.
 
-\paragraph{Planlægnings poker i target-projektet.} I target-projekt er pokeren blevet brugt ved sprint planlægning til at estimere sprint backloggen. I starten af projektet var estimaterne meget forskellige grundet at gruppens individer ikke havde samme forståelse af hvad opgaven indebar. Pokeren havde derfor den effekt af der ikke blot var consensus om opgavens størrelse, men også om indhold, hvilket førte til at gruppens individer havde bedre forståelse af projektet fælles retning. Senere i forløbet var estimaterne mere ens grundet gruppes bedre forståelse af projektet som helhel og de enkelte delopgaver. Brugen af poker var derfor en succes i target-projketet.
+\paragraph{Planlægnings poker i target-projektet.} I target-projekt er pokeren blevet brugt ved sprint planlægning til at estimere sprint backloggen. I starten af projektet var individernes estimater meget forskellige grundet at gruppen ikke havde samme forståelse af hvad opgaven indebar. Pokeren havde derfor den effekt af der ikke blot var consensus om opgavens størrelse, men også om indhold, hvilket førte til at gruppens individer havde bedre forståelse af projektet fælles retning. Senere i forløbet var estimaterne mere ens grundet gruppes bedre forståelse af projektet som helhel og de enkelte delopgaver. Brugen af poker var derfor en succes i target-projketet.
 
+\paragraph{PERT estimeringsmodel} PERT, Program Evaluation and Review Technique, er en estimeringsmetode hvor man medregner risiko.\\
+
+\begin{align*}
+T_E = \frac{aO + bM + cP + \cdots zN}{a+b+c+ \cdots z}
+\end{align*}\\
+
+
+hvor,\\
+O er et optimistisk estimat og x er dets sandsynlighed \\
+M er det mest realistiske estimat og y er dets sandsynlighed \\
+P er et  pessimistiske  estimat og z er dets sandsynlighed \\ \\
+Modellen kan udvides ved indsættelse af flere senarier og deres sandsynlighed i $nZ$ og $z$\\
+
+Når man laver de tre forskellige estimater er det vigtig at man analysere hvad kriterierne er fra at scenariet opfyldes. Hvis et projekt, hvis alt går godt er færdig på 2 måneder, men 3 måneder hvis man medregner små forhindringer forhindringer og 6 måneder hvis der mødes støre problemer skal man kigge på hvor sandsynligt de tre forskellige senarier er. Nedenfor ses et udregnet eksemplet hvor realistiske estimat er dobbelt så sandsynligt som det optimistiske som er dobbelt så sandsynligt som det pessimistiske.
+
+ \begin{align*}
+ T_E = \frac{6\%\cdot 2 + 12\%\cdot 3 + 2\%\cdot 6}{6+12+2} = 3
+ \end{align*}\\
+
+Fordelen ved denne model er at man tager hensyn til risikoen ved forskellige senarier og PERT kan med fordel kombineres med planlægningspoker hvor hvert senarie og dets sandsynlighed estimeres dermed.
 
 \end{document}
