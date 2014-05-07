@@ -4,9 +4,9 @@
 
 \section{Precedence network}
 %Which question does this cover / introduction
-For at kunne besvare spørgsmålet om hvordan man balancerer den estimerede tid med den tid, der er til rådighed, for at nå frem til et tilfredsstillende produkt til en fastsat deadline, vil forskellige metoder for planlægning blive undersøgt. Dette afsnit vil omhandle The Precedence Network, som er en metode, der bruges til at planlægge et projekts aktiviteter og deres relationer. 
+For at kunne besvare hvordan man afvejer den estimerede tid med den tid, der er til rådighed, vil forskellige metoder for planlægning blive undersøgt. Dette afsnit vil omhandle precedence network diagrammer, som er en metode, der bruges til at planlægge et projekts aktiviteter og deres relationer. 
 
-The Precedence Network repræsenterer aktiviteter som knuder, mens forbindelserne mellem disse knuder repræsenterer krav til rækkefølgen. Hver aktivitet har en varighed, og tiden flyder fra venstre mod højre. Det gør det muligt at udføre det \textit{forlæns gennemløb}, hvor \textbf{tidligste start} og \textbf{tidligste slut} udregnes. Herefter kan det \textit{baglæns gennemløb}, hvor \textbf{seneste afslutning} og \textbf{seneste start} udregnes, udføres. Ud fra disse gennemløb, er det muligt at identificere den \textit{kritiske sti}. \cite[p.~139-151]{hughescotterell09}
+Precedence Network diagrammet repræsenterer aktiviteter som knuder, mens forbindelserne mellem disse knuder repræsenterer krav til rækkefølgen. Hver aktivitet har en varighed, og tiden flyder fra venstre mod højre. Det gør det muligt at udføre det \textit{forlæns gennemløb}, hvor \textbf{tidligste start} og \textbf{tidligste slut} udregnes. Herefter kan det \textit{baglæns gennemløb}, hvor \textbf{seneste afslutning} og \textbf{seneste start} udregnes, udføres. Ud fra disse gennemløb, er det muligt at identificere den \textit{kritiske sti}. \cite[p.~139-151]{hughescotterell09}
 
 	%Identify activities (WBS)
 I den aktivitets-baserede tilgang findes først alle aktiviteter, som projektet menes at indeholde. Hver aktivitet estimeres inden den tilføjes til en knude. Dermed har knuden på nuværende tidspunkt en \textbf{varighed} og en \textbf{etiket}, der beskriver aktiviteten. Figur~\ref{fig:precedencenode} viser et eksempel på en knude i netværket.
@@ -18,7 +18,7 @@ I den aktivitets-baserede tilgang findes først alle aktiviteter, som projektet m
 \label{fig:precedencenode}
 \end{figure}
 
-Når hver aktivitet er repræsenteret af en knude, placeres knuderne i den rækkefølge de forventes at blive udført. Forbindelserne mellem knuderne viser afhængighederne. Dette udgør The Precedence Network.
+Når hver aktivitet er repræsenteret af en knude, placeres knuderne i den rækkefølge de forventes at blive udført. Forbindelserne mellem knuderne viser afhængighederne. Dette udgør precedence network diagrammet.
 
 %	%The forward pass
 %På nuværende tidspunkt kan det \textit{forlæns gennemløb} udføres. Det gøres ved at følge hver sti fra start knuden til slut knuden. Den \textbf{tidligste start} udregnes og udfyldes ved at summere varighederne fra alle tidligere aktiviteter (bemærk at nogle aktiviteter kan udføres parallelt - i dette tilfælde medregnes kun den aktivitet med længst varighed) mens den \textbf{tidligste afslutning} udregnes ved at addere den enkelte aktivitets varighed med den tidligste start.
@@ -50,7 +50,7 @@ Forsinkelser i disse aktiviteter vil med stor sandsynlighed forårsage forsinkels
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.54]{precedence.pdf}
-\caption{Aktivitets-baseret Precedence Network over target-projektet}
+\caption{Aktivitets-baseret precedence network over target-projektet}
 \label{fig:precedencenetwork}
 \end{figure}
 \end{landscape}
