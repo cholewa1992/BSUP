@@ -1,6 +1,8 @@
 \documentclass[../report.tex]{subfiles}
 \begin{document}
-Use Case Points(UCP) er en metode til at estimere størrelsen af software projekter. Metoden bygger på en række forskellige målbare tal som vil blive angivet med følgende forkortelser:
+\section{Use Case Points}
+
+Use Case Points(UCP)\footnote{\url{http://www.cs.cmu.edu/~jhm/Readings/Cohn\%20-\%20Estimating\%20with\%20Use\%20Case\%20Points\_v2\%2012-24-50-761.pdf}} er en metode til at estimere størrelsen af software projekter. Metoden bygger på en række forskellige målbare tal som vil blive angivet med følgende forkortelser:
 \begin{itemize}
 \item UUCP - Unadjusted Use Case Points, den rå score for alle use cases.
 \item UAP - Unadjusted Actor Points, den rå score for alle actors.
@@ -8,27 +10,29 @@ Use Case Points(UCP) er en metode til at estimere størrelsen af software projekt
 \item ECF - Environmental Complexity Factor, en faktor der siger noget om kompleksiteten af det miljø systemet bliver udviklet i.
 \item UCP - Use Case Points, den samlede score for estimeringen.
 \end{itemize}
-Når man har beregnet de fire første kan man beregne UCP ud fra følgende formel:\[UCP = (UAP + UUCP)*TCF*ECF\]
+Når man har beregnet de fire første kan man beregne UCP ud fra følgende formel:\[UCP = (UAP + UUCP) \cdot TCF \cdot ECF\]
 
 \subsubsection{UUCP}
-For at beregne UUCP tildeler man hver enkelt use case en score baseret på antallet af transaktioner i den enkelte use case. Idéen er at et højt antal transaktioner medfører en høj kompleksitet. Per definition af UCP metoden er en use case med 1-3 transaktioner af lav kompleksitet og tildeles 5 UUCP, 4-7 transaktioner betyder at use casen har en mellem kompleksitet og tildeles 10 UUCP og alt over 7 transaktioner bliver vurderet til en høj kompleksitet hvor use casen bliver tildelt 15 UUCP. Den samlede UUCP for systemet er simpelthen summen af UUCPerne fra hver use case.
+For at beregne UUCP tildeler man hver enkelt use case en score baseret på antallet af transaktioner i den enkelte use case. Idéen er at et højt antal transaktioner medfører en høj kompleksitet. Per definition af UCP metoden er en use case med 1-3 transaktioner af lav kompleksitet og tildeles 5 UUCP, 4-7 transaktioner betyder at use casen har en mellem kompleksitet og tildeles 10 UUCP og alt over 7 transaktioner bliver vurderet til en høj kompleksitet hvor use casen bliver tildelt 15 UUCP. Den samlede UUCP for systemet er ganske simpelt summen af UUCPerne fra hver use case.
 
 \subsection{UAP}
 For at beregne UAP tildeler man hver enkelt actor en score baseret på om det er:
 \begin{itemize}
-\item Et veldefineret API - 1 point
-\item Et svagt defineret API - 2 point
-\item Et menneske - 3 point
+\item Et eksternt system der skal interagere med systemet vha. en veldefineret API. - 1 point
+\item Et eksternt system der skal interagere med systemet vha. standard protokoller. - 2 point
+\item Et menneske der skal interagere med systemet vha. en grafisk brugerflade. - 3 point
 \end{itemize}
 Den samlede UAP score er summen af de tildelte point.
 
 \subsection{TCF}
-
+Når man beregner TCF kigger man på 13 forskellige tekniske aspekter\footnote{For en fuld liste over hvilke faktorer der kigges på, se appendix.} af systemet der skal udvikles, bl.a. hvor nemt det skal være at vedligeholde, om det skal være distribueret og hvor stor vægt der skal lægges på sikkerhed. Hver af disse faktorer har en medfødt sværhedsgrad, som fx 2,0 for et distribueret system. Denne sværhedsgrad ganges med en faktor mellem 0 og 5 baseret på hvor vigtigt det individuelle tekniske aspekt er for systemet, hvor 0 betyder at aspektet er irrelevant for systemet, og 5 betyder at aspektet har høj relevans for systemet. Når man har vægtet alle 13 aspekter kan man summere den score man får(TF) og beregne TCF på følgende måde: \[TCF = (0,6 + \frac{TF}{100})\]
 \subsection{ECF}
-
-\subsection{Vores target-projekt}
-I målprojektet er der defineret 11 use cases og de kan tildeles UUCP som følger:
+ECF beregnes på en måde tilsvarende TCF. Her kigger man dog på miljømæssige faktorer i stedet for tekniske. Dette inkluderer faktorer som hvor bekendte udviklerne er med udviklingsprocessen, hvor stabile kravene til systemet er og hvor motiverede udviklerne er. I alt kigges der på 8 forskellige miljømæssige faktorer.\footnote{For en komplet liste af miljømæssige faktorer, se appendix.} Ligesom ved TCF tildeles hver faktor en værdi fra 0 til 5, hvor 0 betyder af den pågeældende faktor ikke er gældende, og 5 betyder at den pågældende faktor er meget gældende. Når man har vægtet alle 8 faktorer summerer man resultatet(EF), og beregner ECF på følgende måde: \[ECF = (1,4 - 0,03\cdot EF)\]I modsætning til TCF betyder en høj score i en miljømæssig faktor som regel at estimeringen nedjusteres, som det fremgår af formlen for ECF.
+\subsection{UCP i target-projektet}
+I target-projektet er der defineret 11 use cases og de kan tildeles UUCP som vist på tabel \ref{tab:UUCP}. Summen af UUCP  er altså 80.
 \begin{table}[!h] 
+\centering
+\scalebox{0.75}{
 \begin{tabular}{|c|c|c|}
 \hline Use Case & Antal af transaktioner & UUCP  \\ 
 \hline UC-01 & 4 & 10  \\ 
@@ -44,9 +48,9 @@ I målprojektet er der defineret 11 use cases og de kan tildeles UUCP som følger:
 \hline UC-11 & 3 & 5 \\
 \hline
 \end{tabular}
-\caption{} \label{tab:UUCP}
+}
+\caption{UUCP i target-projektet} \label{tab:UUCP}
 \end{table}
-Summen af UUCP  er altså 80.
 
 Ligeledes kan man tildele en samlet UAP på 9 da der er 3 forskellige menneskelige actors.
 

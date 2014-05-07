@@ -1,4 +1,4 @@
-\documentclass{report}
+\documentclass[a4paper, 12pt]{report}
 \usepackage{subfiles}
 \usepackage[latin1]{inputenc}
 \usepackage[english, danish]{babel}
@@ -27,6 +27,12 @@
   \if@right\hfill\fi\closequote\end{quote}\end{snugshade}}
 \@namedef{shadequote*}{\@rightfalse\shadequote@i}
 \@namedef{endshadequote*}{\endshadequote}
+
+\usepackage{url}
+\usepackage{hyperref}
+
+\newcommand\todo[1]{\textcolor{red}{TODO: }#1\PackageWarning{TODO:}{TODO tag!!}}
+
 
 \makeatletter
 
@@ -58,9 +64,8 @@
 \restoregeometry
 
 \chapter{Estimering}
-%Delphi in project
+\subfile{tex/planningpoker.tex}
 %Function Points
-\section{Use Case Points}
 \subfile{tex/useCasePoints.tex}
 
 \chapter{Aktivitetsplanlægning}
@@ -75,6 +80,7 @@ I dette kapitel kigges der på emner relevante for at svarer på første spørgsmål 
 \subfile{tex/gantt.tex}
 
 \subfile{tex/precedencenetwork.tex}
+\restoregeometry
 
 \subfile{tex/productBreakdown.tex}
 \newpage
@@ -100,6 +106,17 @@ I dette kapitel kigges der på emner relevante for at svarer på første spørgsmål 
 %Which parts of the project could have been done differently for a better result?
 
 \chapter{Konklusion}
+
+\begin{thebibliography}{99}
+
+\bibitem{hughescotterell09}
+  Bob Hughes and Mike Cotterell,
+  \textit{Software Project Management}.
+  McGraw-Hill Education,
+  5th Edition,
+  2009.
+
+\end{thebibliography}
 
 
 \end{document}
