@@ -1,0 +1,54 @@
+\documentclass[../report.tex]{subfiles}
+
+
+\begin{document}
+
+\graphicspath{{img/}{../img/}}
+
+\section{Delphi}
+
+Delphi er en estimeringsmetode der bygger på antagelsen af, at en gruppes estimat er bedre end den individuelles estimat. Metoden er udviklet i 1950'erne og er oprindeligt brugt til estimering af krigssituationer\footnote{Indsæt kilde}. Det foregik på den måde, at en gruppe eksperter i en budrunde anonymt bød ind med deres estimat af sandsynligheden for fjendtlige angreb på forskellige interessepunkter. Alle estimaterne blev offentlige for gruppen på samme tid. Efter hver runde blev der snakket om de forskellige estimater, hvorefter en ny runde begyndte indtil der var opnået konsensus om et estimat. 
+
+Det vigtige ved denne metode er at anonymiteten og den samtidige offentliggørelse eliminerer kognitiv forankring; menneskers tendens til at gå med det første tilgængelige information, når en beslutning skal træffes.
+
+
+\paragraph{Hvad er planlægnings poker?}
+
+Planlægnings poker, eller Scrum poker, bygger på Delphi metoden. En gruppe laver budrunder, hvor hvert medlem kommer med sit anonyme bud på en opgaves størrelse. Pokeren bliver udført med et sæt spillekort med værdierne fra Fibonaccis talrække og hvert medlem lægger sit kort med forsiden nedad. Alle kort vendes så på samme tid, hvorefter resultatet diskuteres og en ny runde begynder. Processen gentages indtil der er opnået enighed.
+
+Grunden til at bruge Fibonaccis talrække i stedet for at estimere i timer er, at det ofte forvirrer at estimere i timer, hvorimod en relativ enhed er nemmere at forholde sig til. Ved adskillelse har man også bedre mulighed for at måle \textit{velocity}, antal point pr timer, hvilket er relevant, hvis man ønsker at måle på en gruppes produktivitet.
+
+
+\paragraph{Planlægnings poker i target-projektet.} I target-projekt er pokeren blevet brugt ved sprintplanlægning til at estimere sprint backloggen. Det foregik som beskrevet ovenfor, ved at have budrunder med anonyme bud, for derefter at diskutere buddene og gentage processen indtil der blev opnået konsensus.
+
+\todo Flyt til reflektionsafsnit
+%I starten af projektet var estimaterne meget forskellige grundet at gruppens medlemmer ikke havde samme forståelse af hvad opgaven indebar. Pokeren havde derfor den effekt, at der ikke blot blev nået konsensus om opgavens størrelse, men også om indhold, hvilket førte til at gruppens medlemmer havde bedre forståelse af projektets fælles retning. Senere i forløbet var estimaterne mere ens grundet gruppens bedre forståelse af projektet som helhel og de enkelte delopgaver. Brugen af poker var derfor en succes i target-projektet.
+
+
+\paragraph{PERT estimeringsmodel} PERT, Program Evaluation and Review Technique, er en estimeringsmetode, hvor forskellige udfald medregnes. Der tages højde for sandsynligheden for at opgaven kan løses hurtigere og der medregnes en risiko for at opgaven trækker ud. Estimatet på en opgave kan således udregnes med følgende formel: \\
+
+\begin{align*}
+T_E = \frac{aO + bM + cP + \cdots + zN}{a+b+c+ \cdots + z}
+\end{align*}\\
+
+
+hvor,\\
+O er et optimistisk estimat og a er dets sandsynlighed \\
+M er det mest realistiske estimat og b er dets sandsynlighed \\
+P er et  pessimistiske  estimat og c er dets sandsynlighed \\ \\
+Modellen kan udvides ved indsættelse af flere scenarier og deres sandsynlighed i $zN$ og $z$.\\
+
+
+%Når man laver de tre forskellige estimater er det vigtigt, at man analyserer hvad kriterierne er for at scenariet opfyldes. Hvis et projekt, hvis alt går godt er færdig på 2 måneder, men 3 måneder hvis man medregner små forhindringer forhindringer og 6 måneder hvis der mødes støre problemer skal man kigge på hvor sandsynligt de tre forskellige senarier er. Nedenfor ses et udregnet eksemplet hvor realistiske estimat er dobbelt så sandsynligt som det optimistiske som er dobbelt så sandsynligt som det pessimistiske.
+
+\todo QA note fra Thomas: Første linje herunder virker uklar. Jeg er usikker på, om du mener at opgaven man estimerer skal være klart defineret eller om vi snakker om noget helt andet? \\
+
+Når man laver de tre forskellige estimater er det vigtigt, at man analyserer hvad kriterierne er for at scenariet opfyldes. For at opstille et eksempel, kan der tænkes på en aktivitet, der optimistisk set kan færdiggøres på 2 dage, men hvis der opleves mindre forhindringer, hvilket er realistisk at antage, vil tage 3 dage og hvis der mødes større problemer vil tage 6 dage. Det vurderes at det realistiske estimat er næsten dobbelt så sandsynligt som det optimistiske, der igen er dobbelt så sandsynligt som det pessimistiske. Nedenfor ses det udregnede estimat på eksemplet.
+
+ \begin{align*}
+ T_E = \frac{30\%\cdot 2 + 55\%\cdot 3 +15\%\cdot 6}{30\%+55\%+15\%} = 3.15
+ \end{align*}\\
+
+Fordelen ved denne model er, at man tager hensyn til forskellige scenarier og PERT kan med fordel kombineres med planlægningspoker, hvor gruppens medlemmer i hver budrunde estimerer hvert scenarie og dets sandsynlighed.
+
+\end{document}

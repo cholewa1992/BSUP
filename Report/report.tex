@@ -15,14 +15,31 @@
 \usepackage{pdflscape}
 \usepackage{tabularx}
 \usepackage{geometry}
+\usepackage{titlesec, blindtext, color}
+\definecolor{gray75}{gray}{0.75}
+\newcommand{\hsp}{\hspace{20pt}}
+\titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
+\makeatletter
+\newif\if@right
+\def\shadequote{\@righttrue\shadequote@i}
+\def\shadequote@i{\begin{snugshade}\begin{quote}\openquote}
+\def\endshadequote{%
+  \if@right\hfill\fi\closequote\end{quote}\end{snugshade}}
+\@namedef{shadequote*}{\@rightfalse\shadequote@i}
+\@namedef{endshadequote*}{\endshadequote}
+
 \usepackage{url}
 \usepackage{hyperref}
+
+\newcommand\todo[1]{\textcolor{red}{TODO: }#1\PackageWarning{TODO:}{TODO tag!!}}
+
 
 \makeatletter
 
 \def\twodigits#1{\expandafter\two@digits\csname c@#1\endcsname}
 
 \AddEnumerateCounter\twodigits\two@digits{01}
+
 
 \makeatother
 
@@ -35,7 +52,8 @@
 
 \begin{document}
 
-\maketitle
+\input{./tex/title.tex}
+
 \newpage
 \tableofcontents
 \newpage
@@ -45,27 +63,42 @@
 \newpage
 \restoregeometry
 
-\chapter{Estimering}
-%Delphi in project
-%Function Points
-\subfile{tex/useCasePoints.tex}
+
 
 \chapter{Aktivitetsplanlægning}
+I dette kapitel kigges der på emner relevante for at svare på første spørgsmål i problemformuleringen \\
+
+\textit{1. Hvordan kan man planlægge projektet?}\\
+
+\noindent ved først at kigge på planlægningen udført i target projektet og derefter på precedence network som alternativ.
+
 %Gantt chart in project
 %The precedence network
-\subfile{tex/precedencenetwork.tex}
 
 \subfile{tex/productBreakdown.tex}
 \newpage
 \restoregeometry
 
 \subfile{tex/activityBreakdown.tex}
-
 \newpage
-
 \restoregeometry
 
+
+\subfile{tex/gantt.tex}
+
+\subfile{tex/precedencenetwork.tex}
+\restoregeometry
+
+
+
+
+\chapter{Estimering}
+\subfile{tex/planningpoker.tex}
+%Function Points
+\subfile{tex/useCasePoints.tex}
+
 \chapter{Procesmodeller}
+\label{sec:procesmodeller}
 
 \subfile{tex/scrumbut.tex}
 
@@ -79,6 +112,17 @@
 %Which parts of the project could have been done differently for a better result?
 
 \chapter{Konklusion}
+
+\begin{thebibliography}{99}
+
+\bibitem{hughescotterell09}
+  Bob Hughes and Mike Cotterell,
+  \textit{Software Project Management}.
+  McGraw-Hill Education,
+  5th Edition,
+  2009.
+
+\end{thebibliography}
 
 
 \end{document}
