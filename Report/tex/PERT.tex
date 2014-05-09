@@ -14,19 +14,21 @@ hvor,\\
 O er et optimistisk estimat og a er dets sandsynlighed \\
 M er det mest realistiske estimat og b er dets sandsynlighed \\
 P er et  pessimistiske  estimat og c er dets sandsynlighed \\ \\
-Modellen kan udvides ved indsættelse af flere scenarier og deres sandsynlighed i $zN$ og $z$.\\
+Modellen kan udvides ved indsættelse af flere scenarier og deres sandsynlighed i $zN$ og $z$.
 
 
-%Når man laver de tre forskellige estimater er det vigtigt, at man analyserer hvad kriterierne er for at scenariet opfyldes. Hvis et projekt, hvis alt går godt er færdig på 2 måneder, men 3 måneder hvis man medregner små forhindringer forhindringer og 6 måneder hvis der mødes støre problemer skal man kigge på hvor sandsynligt de tre forskellige senarier er. Nedenfor ses et udregnet eksemplet hvor realistiske estimat er dobbelt så sandsynligt som det optimistiske som er dobbelt så sandsynligt som det pessimistiske.
+\subsection{PERT i target-projektet }
 
-\todo QA note fra Thomas: Første linje herunder virker uklar. Jeg er usikker på, om du mener at opgaven man estimerer skal være klart defineret eller om vi snakker om noget helt andet? \\
-
-Når man laver de tre forskellige estimater er det vigtigt, at man analyserer hvad kriterierne er for at scenariet opfyldes. For at opstille et eksempel, kan der tænkes på en aktivitet, der optimistisk set kan færdiggøres på 2 dage, men hvis der opleves mindre forhindringer, hvilket er realistisk at antage, vil tage 3 dage og hvis der mødes større problemer vil tage 6 dage. Det vurderes at det realistiske estimat er næsten dobbelt så sandsynligt som det optimistiske, der igen er dobbelt så sandsynligt som det pessimistiske. Nedenfor ses det udregnede estimat på eksemplet.
+For at kunne anvende PERT på en opgave fra target-projektet, bad vi udviklerne komme med en optimistisk vurdering, den mest sandsynlige vurdering og en pessimistisk vurdering samt sandsynlighederne for disse udfald. Opgaven der blev vurderet gik ud på at lave metoder til at uploade og downloade medier. Gruppen blev enige om, at det optimistisk set ville tage 4 timer. Det mest realistiske blev dog vurderet til 6 timer, men den pessimistiske vurdering lød på 11 timer, idét det var en opgave, som ingen af gruppens medlemmer følte sig helt inde i og der derfor kunne opstå større problemer, der krævede en del research. Gruppen mente, at der var 20\% sandsynlighed for det optimisiske vurdering, 50\% for den mest realistiske vurdering og 30\% for den pessimistiske vurdering. Med disse oplysninger kan følgende estimat udregnes:
 
  \begin{align*}
- T_E = \frac{30\%\cdot 2 + 55\%\cdot 3 +15\%\cdot 6}{30\%+55\%+15\%} = 3.15
+ T_E = \frac{20\%\cdot 4 + 50\%\cdot 6 +30\%\cdot 11}{20\%+50\%+30\%} = 7.1
  \end{align*}\\
 
+\todo {Find ud af, hvad opgaven rent faktisk blev estimeret til, hvad target-gruppens velocity var OG hvad der faktisk blev brugt på at udføre opgaven.} \\ \\
+Opgaven ville altså, hvis gruppen havde brugt PERT, blive estimeret til 7.1 timer. Med planlægnings poker blev opgaven estimeret til ?? point. Med en velocity (læs mere om velocity i afsnit~\ref{sec:Delphi}) på ?? ville opgaven, hvis vi omregner til timer, tage ?? timer. Opgaven blev aktuelt udført på ?? timer. \\
+
+\todo flyt til reflektionsafsnit \\
 Fordelen ved denne model er, at man tager hensyn til forskellige scenarier og PERT kan med fordel kombineres med planlægningspoker, hvor gruppens medlemmer i hver budrunde estimerer hvert scenarie og dets sandsynlighed.
 
 \end{document}
