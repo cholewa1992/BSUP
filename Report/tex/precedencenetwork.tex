@@ -2,16 +2,13 @@
 \begin{document}
 \graphicspath{{img/}{../img/}}
 
-\section{Precedence network}
+\section{Precedence Network}
 %Which question does this cover / introduction
-Dette afsnit vil omhandle precedence network diagrammer, som er en metode, der bruges til at planlægge et projekts aktiviteter og deres relationer. 
+Dette afsnit vil omhandle Precedence Network diagrammer, som er en metode, der bruges til at planlægge et projekts aktiviteter og deres relationer. 
 
-Precedence Network diagrammet repræsenterer aktiviteter som knuder, mens forbindelserne mellem disse knuder repræsenterer krav til rækkefølgen. Hver aktivitet har en varighed, og tiden flyder fra venstre mod højre. Det gør det muligt at udføre det \textit{forlæns gennemløb}, hvor \textbf{tidligste start} og \textbf{tidligste slut} udregnes. Herefter kan det \textit{baglæns gennemløb}, hvor \textbf{seneste afslutning} og \textbf{seneste start} udregnes, udføres. Ud fra disse gennemløb, er det muligt at identificere den \textit{kritiske sti}. \cite[p.~133-151]{hughescotterell09}
+Precedence Network diagrammet repræsenterer aktiviteter som knuder, mens forbindelserne mellem disse knuder repræsenterer krav til rækkefølgen. Hver aktivitet har en varighed, og tiden flyder fra venstre mod højre. En knude i netværket har en etiket og 6 værdier (se figur~\ref{fig:precedencenode}). 
 
-	%Identify activities (WBS)
-%Der findes tre tilgange til dette; den aktivitetsbaserede, den produktbaserede\footnote{I den produkt-baserede tilgang, hvor der først produceres et Product Breakdown, dernæst et Product Flow Diagram for til sidst at omdanne dette til en sorteret liste af aktiviteter} og den hybride. I den hybride tilgang udarbejdes et Work Breakdown Structure baseret på projektets produkter og for hvert produkt et sæt af aktiviteter krævet for at producere produktet.
-
-For at kunne lave et precedence network skal projektets aktiviteter identificeres. Dette er blevet gjort i afsnit~\ref{sec:Activity Breakdown} om Activity Breakdown. Hver aktivitet estimeres inden den tilføjes til en knude. Dermed har knuden på nuværende tidspunkt en \textbf{varighed} og en \textbf{etiket}, der beskriver aktiviteten. Figur~\ref{fig:precedencenode} viser et eksempel på en knude i netværket.
+For at kunne lave et Precedence Network skal projektets aktiviteter identificeres. Dette er blevet gjort i afsnit~\ref{sec:Activity Breakdown} om Activity Breakdown. Hver aktivitets varighed estimeres inden den tilføjes til en knude. Når hver aktivitet er repræsenteret af en knude med en varighed, placeres knuderne i den rækkefølge de forventes at blive udført. Forbindelserne mellem knuderne viser afhængighederne. Derefter kan de resterende værdier udregnes. Med alle værdier på hver knude i netværket, er det muligt at identificere den \textit{kritiske sti}. \cite[p.~133-151]{hughescotterell09}
 
 \begin{figure}[H]
 \centering
@@ -20,22 +17,12 @@ For at kunne lave et precedence network skal projektets aktiviteter identificere
 \label{fig:precedencenode}
 \end{figure}
 
-Når hver aktivitet er repræsenteret af en knude, placeres knuderne i den rækkefølge de forventes at blive udført. Forbindelserne mellem knuderne viser afhængighederne. Dette udgør precedence network diagrammet.
-
-%	%The forward pass
-%På nuværende tidspunkt kan det \textit{forlæns gennemløb} udføres. Det gøres ved at følge hver sti fra start knuden til slut knuden. Den \textbf{tidligste start} udregnes og udfyldes ved at summere varighederne fra alle tidligere aktiviteter (bemærk at nogle aktiviteter kan udføres parallelt - i dette tilfælde medregnes kun den aktivitet med længst varighed) mens den \textbf{tidligste afslutning} udregnes ved at addere den enkelte aktivitets varighed med den tidligste start.
-%
-%	%The backward pass
-%Det baglæns gennemløb er, som navnet antyder, det modsatte. Alle stier fra slut til start følges, og den \textbf{seneste afslutning} findes ved at sætte slut-knudens seneste afslutning til sammes tidligste afslutning og bevæge sig baglæns gennem netværket. Den \textbf{seneste start} findes ved at trække den enkelte aktivitets varighed fra den tidligste afslutning.
-
-\textbf{Slækket} er forskellen mellem den tidligste start og den tidligste afslutning af en knude. Det betyder, at hvis slækket er 0, er aktiviteten kritisk og enhver forsinkelse i aktiviteten vil medføre en forsinkelse i hele projektet.  
-
 	%Identify the critical path
-Den kritiske sti er stien i netværket, hvor alle aktiviteter på stien har et slæk på 0. Som det ses af precedence network diagrammet i figur~\ref{fig:precedencenetwork}, indeholder den kritiske sti (markeret med rød) kun aktiviteter, hvor slækket er netop 0. 
+Den kritiske sti er stien i netværket, hvor alle aktiviteter på stien har et slæk på 0. Som det ses af Precedence Network diagrammet i figur~\ref{fig:precedencenetwork}, indeholder den kritiske sti (markeret med rød) kun aktiviteter, hvor slækket er netop 0. 
 
-Forsinkelser i aktiviteterne på den kritiske vil med stor sandsynlighed forårsage forsinkelser i hele projektet. Det er et vigtigt skridt at identificere disse aktiviteter i forhold til både risikoanalyse, ressourceallokering og projektstyring. I forbindelse med projektstyring, er der flere måder, hvorpå man kan forsøge at forkorte den kritiske sti, således at varigheden på det samlede projekt forkortes. Det involverer bl.a. tilføjelse af ressourcer, øget brug af ressourcer, reallokering af staben, reducering af scope eller reducering af kvalitet. \cite[p~230]{hughescotterell09}
+Forsinkelser i aktiviteterne på den kritiske vil med stor sandsynlighed forårsage forsinkelser i hele projektet. I forbindelse med projektstyring, er der flere måder, hvorpå target-gruppen kunne have forsøgt at forkorte den kritiske sti, således at varigheden på det samlede projekt blev forkortet. Det involverer bl.a. tilføjelse af ressourcer, øget brug af ressourcer, reallokering af staben, reducering af scope eller reducering af kvalitet. \cite[p~230]{hughescotterell09}
 
-I et eksamensprojekt, hvor ressourcerne er meget låste i form af fast deadline og gruppestørrelse, er der ikke samme mulighed for at tilføje ressourcer. Hvis en reducering af scope eller reducering af kvalitet vil undgås, kan man i stedet forsøge at øge bruget af ressourcerne ved at flytte dem fra aktiviteter med et stort slæk til aktiviteterne på den kritiske sti. Da aktiviteter med stort slæk ikke har indflydelse på den samlede varighed af projektet, giver det ingen værdi at forsøge at forkorte disse. I takt med at den kritiske sti forkortes, skal der bestandigt holdes øje med eventuelle nyopståede kritiske stier. 
+I target-projektet, hvor ressourcerne var meget låste i form af fast deadline og gruppestørrelse, var der ikke samme mulighed for at tilføje ressourcer. Hvis en reducering af scope eller reducering af kvalitet ville undgås, kunne man i stedet have forsøgt at øge bruget af ressourcerne ved at flytte dem fra aktiviteter med et stort slæk til aktiviteterne på den kritiske sti. Da aktiviteter med stort slæk ikke har indflydelse på den samlede varighed af projektet, giver det ingen værdi at forsøge at forkorte disse.
 
 Generelt set opnås tidsbesparelser ved øget parallelisme og fjernelsen af flaskehalse. Med henblik på den anvendte procesmodel i target-projektet (se afsnit~\ref{sec:procesmodeller} om procesmodeller), hvor aktiviteterne løbende nedbrydes til mindre aktiviteter, kan disse mindre aktiviteter muligvis udføres sideløbende. Dette vil altså øge parallelismen på den kritiske sti og dermed forkorte projektets samlede varighed.
 
@@ -45,7 +32,7 @@ Generelt set opnås tidsbesparelser ved øget parallelisme og fjernelsen af flaske
 \begin{figure}[H]
 	\centering
 	\includegraphics[scale=0.54]{precedence.pdf}
-\caption{Aktivitets-baseret precedence network over target-projektet}
+\caption{Aktivitets-baseret Precedence Network over target-projektet}
 \label{fig:precedencenetwork}
 \end{figure}
 \end{landscape}
