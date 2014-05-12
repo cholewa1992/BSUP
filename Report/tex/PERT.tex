@@ -3,29 +3,24 @@
 \begin{document}
 
 \section{PERT} 
-PERT, Program Evaluation and Review Technique, er en estimeringsmetode, hvor forskellige udfald medregnes. Der tages højde for sandsynligheden for at opgaven kan løses hurtigere og der medregnes en risiko for at opgaven trækker ud. Estimatet på en opgave kan således udregnes med følgende formel: \\
+PERT, Program Evaluation and Review Technique, er en estimeringsmetode, hvor forskellige risici medregnes. Der tages højde for sandsynligheden for at opgaven kan løses hurtigere og der medregnes en risiko for at opgaven trækker ud. Estimatet på en opgave kan således udregnes med følgende formel: 
 
-\begin{align*}
-T_E = \frac{aO + bM + cP + \cdots + zN}{a+b+c+ \cdots + z}
-\end{align*}\\
+\[T_E = \frac{aO + bM + cP}{a+b+c}\]
 
+\noindent hvor,\\
+$O$ er et optimistisk estimat og $a$ er dets sandsynlighed \\
+$M$ er det mest realistiske estimat og $b$ er dets sandsynlighed \\
+$P$ er et  pessimistiske  estimat og $c$ er dets sandsynlighed \\ \\
 
-hvor,\\
-O er et optimistisk estimat og a er dets sandsynlighed \\
-M er det mest realistiske estimat og b er dets sandsynlighed \\
-P er et  pessimistiske  estimat og c er dets sandsynlighed \\ \\
-Modellen kan udvides ved indsættelse af flere scenarier og deres sandsynlighed i $zN$ og $z$.
+\subsection{PERT anvendt på target-projektet }
 
-
-\subsection{PERT i target-projektet }
-
-For at kunne anvende PERT på en opgave fra target-projektet, bad vi udviklerne komme med en optimistisk vurdering, den mest sandsynlige vurdering og en pessimistisk vurdering samt sandsynlighederne for disse udfald. Opgaven der skulle vurderes: Implement Details page Controller and model. Gruppen blev enige om, at det optimistisk set ville tage 1 time. Det mest realistiske blev dog vurderet til 3 timer, mens den pessimistiske vurdering lød på 7 timer, idet det var en opgave, som ingen af gruppens medlemmer følte sig helt inde i og der derfor kunne opstå større problemer, der krævede en del research. Gruppen mente, at der var 40\% sandsynlighed for det optimistiske vurdering, 50\% for den mest realistiske vurdering og 10\% for den pessimistiske vurdering. Med disse oplysninger kan følgende estimat udregnes:
+For at kunne anvende PERT på opgaven "Implement Details page Controller and model" fra target-projektet, bad vi udviklerne komme med en optimistisk vurdering, den mest sandsynlige vurdering og en pessimistisk vurdering samt sandsynlighederne for disse udfald. Udviklerne blev enige om, at det optimistisk set ville tage 2 timer. Deres mest realistiske estimat var dog 3 timer, mens den pessimistiske vurdering lød på 7 timer. Gruppen mente, at der var 10\% sandsynlighed for det optimistiske vurdering, 80\% for den mest realistiske vurdering og 10\% for den pessimistiske vurdering. Med disse oplysninger kan følgende estimat udregnes:
 
  \begin{align*}
- T_E = \frac{40\%\cdot 2 + 50\%\cdot 3 +10\%\cdot 7}{20\%+50\%+30\%} = 3,0
+ T_E = \frac{10\%\cdot 2 + 80\%\cdot 3 +10\%\cdot 7}{10\%+80\%+10\%} = 3,3
  \end{align*}\\
 
-Opgaven ville altså, hvis gruppen havde brugt PERT, blive estimeret til 3 timer. Med planlægnings poker blev opgaven estimeret til 5 point. Med en velocity (læs mere om velocity i afsnit~\ref{sec:Delphi}) på 0,854 ville opgaven, hvis vi omregner til timer, tage 5,85 timer. Opgaven blev aktuelt udført på 3,1 timer. \\
+Opgaven ville altså, hvis gruppen havde brugt PERT, blive estimeret til 3 timer. Med planlægnings poker blev opgaven estimeret til 5 point. Med en velocity på 0,854 ville opgaven, hvis vi omregner til timer, tage 5,85 timer. Opgaven blev aktuelt udført på 4,25 timer. \\
 
 
 \end{document}
