@@ -16,6 +16,7 @@
 \usepackage{tabularx}
 \usepackage{geometry}
 \usepackage{titlesec, blindtext, color}
+\usepackage{pdfpages}
 \definecolor{gray75}{gray}{0.75}
 \newcommand{\hsp}{\hspace{20pt}}
 \titleformat{\chapter}[hang]{\Huge\bfseries}{\thechapter\hsp\textcolor{gray75}{|}\hsp}{0pt}{\Huge\bfseries}
@@ -44,6 +45,8 @@
 \makeatother
 
 
+
+
 \fancyfoot[OC]{\textit{\thepage}}
 
 \title{Sample title}
@@ -51,7 +54,7 @@
 \author{Asbjørn Fjelbro Steffensen (afjs@itu.dk)\\ Thomas Stoy Dragsbæk (thst@itu.dk)\\ Nicki Hjorth Jørgensen (nhjo@itu.dk)\\ Jacob Benjamin Cholewa (jbec@itu.dk)\\ Jakob Merrild (jmer@itu.dk)\\ Mathias Kindsholm Pedersen (mkin@itu.dk)}
 
 \begin{document}
-
+\includepdf{img/ituforside2.pdf}
 \input{./tex/title.tex}
 
 \newpage
