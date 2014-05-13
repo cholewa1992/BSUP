@@ -2,7 +2,7 @@
 \begin{document}
 \section{Use Case Points}
 
-Use Case Points(UCP)\cite{cohn2013} er en metode til at estimere størrelsen af software projekter. Use cases er et værktøj der ofte bliver brugt til at specificere funktionaliteten af et system. De indeholder en kort og præcis forklaring af en specifik funktionalitet som systemet skal understøtte. UCP metoden bygger på en række forskellige målbare tal som vil blive angivet med følgende forkortelser:
+Use Case Points(UCP)\cite{cohn2013} er en metode til at estimere størrelsen af software projekter. Use cases er et værktøj, der ofte bliver brugt til at specificere funktionaliteten af et system. De indeholder en kort og præcis forklaring af en specifik funktionalitet som systemet skal understøtte. UCP metoden bygger på en række forskellige målbare tal som vil blive angivet med følgende forkortelser:
 \begin{itemize}
 \item UUCP - Unadjusted Use Case Points, den rå score for alle use cases.
 \item UAP - Unadjusted Actor Points, den rå score for alle actors.
@@ -10,10 +10,10 @@ Use Case Points(UCP)\cite{cohn2013} er en metode til at estimere størrelsen af s
 \item ECF - Environmental Complexity Factor, en faktor der siger noget om kompleksiteten af det miljø systemet bliver udviklet i.
 \item UCP - Use Case Points, den samlede score for estimeringen.
 \end{itemize}
-Når man har beregnet de fire første kan man beregne UCP ud fra følgende formel:\[UCP = (UAP + UUCP) \cdot TCF \cdot ECF\]
+Når man har beregnet de fire første, kan man beregne UCP ud fra følgende formel:\[UCP = (UAP + UUCP) \cdot TCF \cdot ECF\]
 
 \subsection{UUCP}
-For at beregne UUCP tildeler man hver enkelt use case en score baseret på antallet af input/output forløb mellem brugeren og systemet i den enkelte use case. Idéen er at et højt antal transaktioner medfører en høj kompleksitet. Per definition af UCP metoden har en use case med:
+For at beregne UUCP, tildeler man hver enkelt use case en score, baseret på antallet af input/output forløb mellem brugeren og systemet i den enkelte use case. Idéen er at et højt antal transaktioner medfører en høj kompleksitet. Per definition af UCP metoden har en use case med:
 \begin{itemize}
 \item 1-3 transaktioner en lav kompleksitet og tildeles 5 UUCP
 \item 4-7 transaktioner en mellem kompleksitet og tildeles 10 UUCP
@@ -24,20 +24,20 @@ Den samlede UUCP for systemet er ganske simpelt summen af UUCPerne fra hver use 
 \subsection{UAP}
 For at beregne UAP tildeler man hver enkelt actor en score baseret på om det er:
 \begin{itemize}
-\item Et eksternt system der skal interagere med systemet vha. en veldefineret API. - 1 point
-\item Et eksternt system der skal interagere med systemet vha. standard protokoller. - 2 point
-\item Et menneske der skal interagere med systemet vha. en grafisk brugerflade. - 3 point
+\item Et eksternt system, der skal interagere med systemet vha. en veldefineret API. - 1 point
+\item Et eksternt system, der skal interagere med systemet vha. standard protokoller. - 2 point
+\item Et menneske, der skal interagere med systemet vha. en grafisk brugerflade. - 3 point
 \end{itemize}
 Den samlede UAP score er summen af de tildelte point.
 
 \subsection{TCF}
-Når man beregner TCF kigger man på 13 forskellige tekniske aspekter\footnote{For en fuld liste over hvilke faktorer der kigges på, se afsnit \ref{sec:target-projekt}.} af systemet der skal udvikles. Man vurderer i hvor stor grad disse aspekter spiller ind på projektet og ender med en faktor mellem 0,6 og 1,25, som bliver brugt til at justere det samlede estimat.
+Når man beregner TCF, kigger man på 13 forskellige tekniske aspekter\footnote{For en fuld liste over hvilke faktorer der kigges på, se afsnit \ref{sec:target-projekt}.} af systemet der skal udvikles. Man vurderer i hvor stor grad disse aspekter spiller ind på projektet og ender med en faktor mellem 0,6 og 1,25, som bliver brugt til at justere det samlede estimat.
  
 \subsection{ECF}
 ECF er en faktor tilsvarende TCF. Her kigger man dog på miljømæssige faktorer i stedet for tekniske. I alt kigges der på 8 forskellige miljømæssige faktorer.\footnote{For en komplet liste af miljømæssige faktorer, se afsnit \ref{sec:target-projekt}.} Når man har vurderet disse faktorers indflydelse på projektet, ender man med en faktor mellem 0,425 og 1,7, som bliver brugt til at justere det samlede estimat. 
 
 \subsection{UCP anvendt på target-projektet} \label{sec:target-projekt}
-I target-projektet er der defineret 11 use cases og de kan tildeles UUCP som vist på tabel \ref{tab:UUCP}. Ligeledes kan man tildele en samlet UAP på 9 da der er 3 forskellige menneskelige actors defineret i target-projektet. 
+I target-projektet er der defineret 11 use cases, og de kan tildeles UUCP som vist på tabel \ref{tab:UUCP}. Ligeledes kan man tildele en samlet UAP på 9, da der er 3 forskellige menneskelige actors defineret i target-projektet. 
 \begin{table}[!h] 
 \centering
 \scalebox{0.75}{
@@ -73,8 +73,8 @@ I target-projektet er der defineret 11 use cases og de kan tildeles UUCP som vis
 \end{table}
 
 For at kunne beregne TCF og ECF blev target-projektgruppen bedt om at vurdere hvor stor indflydelse de forskellige faktorer havde på deres projekt. 
-De forklarede deres vurderinger med at det system de skulle udvikle var specificeret som et distribueret system med en server og klient hvor en tredje part(deres samarbejdspartnere fra SMU) også skulle have adgang til serverens funktionalitet. Derfor vurderede de disse faktorer højt (5).
-Omvendt skulle der ikke tages højde for hvor effektive slutbrugerne ville være med systemet eller noget behov for at træne dem. Der var heller ikke behov for at producere kode der kunne genanvendes i senere projekter og de havde valgt ikke at fokusere på sikkerhed. Alle disse faktorer vurderede de derfor til ikke at have nogen indflydelse på projektet (0).
+De forklarede deres vurderinger med, at det system de skulle udvikle var specificeret som et distribueret system med en server og klient, hvor en tredje part(deres samarbejdspartnere fra SMU) også skulle have adgang til serverens funktionalitet. Derfor vurderede de disse faktorer højt (5).
+Omvendt skulle der ikke tages højde for, hvor effektive slutbrugerne ville være med systemet, eller noget behov for at træne dem. Der var heller ikke behov for at producere kode, der kunne genanvendes i senere projekter, og de havde valgt ikke at fokusere på sikkerhed. Alle disse faktorer vurderede de derfor til ikke at have nogen indflydelse på projektet (0).
 \begin{table}[!h]
 \centering
 \scalebox{0.75}{
@@ -101,7 +101,7 @@ Omvendt skulle der ikke tages højde for hvor effektive slutbrugerne ville være m
 \caption{TCF i target-projektet}\label{tab:TCF}
 \end{table}
 
-I forhold til de miljømæssige faktorer mente target-projektgruppen at den største indflydelse kom fra at de alle kun arbejdede på projektet på deltid. De syntes derimod ikke at chef-analytikerens erfaring eller deres kendskab til applikationsdomænet havde nogen indflydelse, da de ikke opererede med en decideret chef-analytiker og applikationsdomænet ikke var særligt komplekst.
+I forhold til de miljømæssige faktorer, mente target-projektgruppen at den største indflydelse kom fra, at de alle kun arbejdede på projektet på deltid. De syntes derimod ikke at chef-analytikerens erfaring eller deres kendskab til applikationsdomænet havde nogen indflydelse, da de ikke opererede med en decideret chef-analytiker, og applikationsdomænet ikke var særligt komplekst.
 \begin{table}[!h]
 \centering
 \scalebox{0.75}{
@@ -122,7 +122,7 @@ I forhold til de miljømæssige faktorer mente target-projektgruppen at den størst
 }
 \caption{ECF i target-projektet}\label{tab:ECF}
 \end{table}
-Deres komplette vurdering af de tekniske og miljømæssige faktorer og deres indflydelse på UCP kan ses på tabel \ref{tab:TCF} \& \ref{tab:ECF}. Baseret på disse vurderinger er den samlede UCP til target-projektet blevet beregnet til at være følgende:
+Deres komplette vurdering af de tekniske og miljømæssige faktorer, og deres indflydelse på UCP kan ses på tabel \ref{tab:TCF} \& \ref{tab:ECF}. Baseret på disse vurderinger er den samlede UCP til target-projektet blevet beregnet til at være følgende:
 \[UCP = (55 + 9) \cdot 0,865 \cdot 1.07 \approx 59,24 \]
 Som udgangspunkt vurderes et UCP til at være 20 mandetimer, hvilket betyder at den samlede størrelse af target-projektet vurderes til at være ca. 1180 mandetimer. Over tid ville man kunne opbygge et bedre estimat på mandetimer/UCP ved at kigge på det faktiske tidsforbrug i tidligere projekter i forhold til deres størrelse i UCP.
 \end{document}
