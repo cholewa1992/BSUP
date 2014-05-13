@@ -6,27 +6,30 @@
 
 \label{sec:Vandfaldsmodellen}
 
-%\paragraph{Brug af Scrum}
-
 \paragraph{Brug af Vandfaldsmodellen}
 
-Hvis target-projektgruppen havde valgt at arbejde med vandfaldsmodellen som procesmodel istedet for Scrum, havde projektet udformet sig en smule anderledes. Target-projektgruppen har lagt tydelig vægt på at definere deres kravspecifikation som det første i forløbet. Efter en aftalt kravspecifikation med krav fra egen og SMU'ernes side var på plads, har de ikke tilføjet nye krav i resten af forløbet. På baggrund af dette kan man argumentere for, at der er arbejdet ud fra en procesmodel der læner sig meget op af vandfaldsmodellen med hensyn til den indledende fase i projektet, hvor der kun blev arbejdet på at definere krav til systemet. De efterfølgende faser (design og implementation) har dog vist sig at være mere iterative for target-projektgruppen. \\
+Hvis target-projektgruppen havde valgt at arbejde med vandfaldsmodellen som procesmodel i stedet for Scrum, havde projektet udformet sig en smule anderledes. Target-projektgruppen har lagt tydelig vægt på at definere deres kravspecifikation som det første i forløbet. Efter en aftalt kravspecifikation med krav fra egen og SMU'ernes side var på plads, har de ikke tilføjet nye krav i resten af forløbet. På baggrund af dette kan man argumentere for, at der er arbejdet ud fra en procesmodel der læner sig meget op af vandfaldsmodellen med hensyn til den indledende fase i projektet, hvor der kun blev arbejdet på at definere krav til systemet. De efterfølgende faser (design og implementation) har dog vist sig at være mere iterative for target-projektgruppen.
 
-Da target-projektgruppen har udtalt at de har lavet designvalg sideløbende med implementeringen af funktionalitet, viser det at de har anvendt det iterative workflow, som Scrum stiller til rådighed. De har løbende taget designbeslutninger som var nødvendige for at færdiggøre det pågældende sprint. Fordelen ved at bruge den agile procesmodel er at man i hele processen kan ændre på designvalg og specifikke implementeringer uden at bryde modellens analogi. Target-projektgruppen har løbende kunne ændre i interfaces, benytte andre design-patterns eller udskifte hele komponenter i systemet, ved blot at tage denne med som opgave i næste sprint. Dette er ikke muligt i vandfaldsmodellen. Her kræver det at gruppen på forhånd har fastslået alle designbeslutninger i design-fasen, og ville dermed ikke have mulighed for lave ændringer løbende. Modellen er derfor på sin vis ufleksibel, men dette kan også være en fordel, da man i target-projektet tydeligere ville kunne følge fremskridt og milepæle, som naturligt genereres ved brug af vandfaldsmodellen. \\
+\paragraph{Brug af Scrum}
 
-Man kan muligvis argumentere for at target-projektgruppen har valgt deres procesmodel ud fra det faktum at vi igen analyserer et eksamensprojekt. At kunne arbejde med individuelle adskildte faser som i vandfaldsmodellen, kræver på forhånd stor viden om arkitekturen for sådanne systemer, samt hvilke alternativer man har til rådighed. I en læringssituation vil det derfor nok være mest anvendeligt at benytte en agil model, hvis man senere får ny viden om et alternativ til arkitekturen, som man har brug for at implementere. 
-
-
+At target-projektgruppen har valgt Scrum som deres procesmodel kan muligvis baseres på det faktum at deres projekt er et eksamensprojekt. De befinder sig altså i en læringssituation hvor en agil procesmodel vil være en fordel. Man kunne forestille sig at de kunne få ny viden om alternativer til arkitekturen, som de har brug for at implementere, hvilket er muligt at gøre løbende i Scrum. At kunne arbejde med individuelle adskilte faser som i vandfaldsmodellen, kræver på forhånd stor viden om arkitekturen for lignende systemer, samt viden præcist om hvilke alternativer man har til rådighed.
 
 
+\paragraph{Valg af procesmodel}
 
-%Hvis der i target-projektet var blevet arbejdet fuldt ud efter vandfaldsmodellen, ville de forskellige faser i projektet have været tydeligt specificeret som også modellen angiver. I dette tilfælde ville processen med at specificere krav ikke være meget anderledes, da denne fase var endeligt besluttet inden target-gruppen påbegyndte systemdesign og implementation af den nødvendige funktionalitet. Hvis man havde valgt at arbejde ethundrede procent efter vandfaldsmodellen skulle design af systemet besluttes og lægges fast inden påbegyndelse af implementation. På denne måde ville man kunne opnå en mere fast struktur, som netop følger analogien i vandfaldsmodellen. Dette kunne i target-projektet give et mere overskueligt projekt, hvor det tydeligt fremgår hvor meget af det valgte system, der allerede er implementeret, og hvor meget der mangler. Det kræver dog også en stor viden inden for arkitekturen af det projekt man ønsker at designe, da denne som sagt skal lægges fast på forhånd og efterfølgende ikke må eller skal ændres. Desuden ville der kræves mere af produkt- og aktivitetsnedbrydningen, da det ellers ville være svært for target-gruppen at estimere aktiviteternes varighed. 
+Med de procesmodeller gennemgået er der tre mulige måder at gøre brug af dem på:
 
-%I target-projektet er der, som tidligere beskrevet, arbejdet ud fra en simpel udgave af den iterative processmodel Scrum. At der er arbejdet iterativt med target-projektet har betydet at der løbende har været mulighed for at kunne tilpasse systemdesignet ud fra nye krav, samt at arbejde på skiftende funktionalitet undervejs. \\
+\begin{enumerate}
+\item Udelukkende vandfaldsmodel
+\item Udelukkende Scrum
+\item En plandreven start for så at gå til Scrum når produktkrav har en hvis form
+\end{enumerate}
 
-%For target-projektgruppen har det været en tydelig opgave at få defineret alle krav så tidligt i forløbet som muligt. Dette medførte at de lukkede for tilgangen af nye krav undervejs i projektet, og gjorde at de havde en tydelig definition af hvilken funktionalitet der skulle implementeres for at projektet kunne verificeres og afsluttes. På baggrund af dette kan man argumentere for, at der er arbejdet ud fra en procesmodel der læner sig meget op af vandfaldsmodellen med hensyn til den indledende fase i projektet, hvor der kun blev arbejdet på at definere krav til systemet. \\
+Target-projektgruppen har valgt at starte med en plandrevet proces hvor de har fået rimeligt styr på kravene. Det samme kunne de have opnået med Scrum, da Scrum ikke dikterer hvad der arbejdes med i sprintene.
 
-%En mere tydelig struktur med arbejdet i de forskellige faser ville fremgå ved brug af vandfaldsmodellen, da hver enkelt fase ville være veldokumenteret inden afslutning. Ved at arbejde ud fra denne model kræves der stor viden om arkitekturen af det projekt man ønsker at designe, og dette kan være problematisk i et eksamensprojekt...
+Da target-projektgruppen har udtalt at de har lavet designvalg sideløbende med implementeringen af funktionalitet, viser det at de har anvendt det iterative workflow, som Scrum stiller til rådighed. De har løbende taget designbeslutninger som var nødvendige for at færdiggøre det pågældende sprint. Fordelen ved at bruge den agile procesmodel er at man i hele processen kan ændre på designvalg og specifikke implementeringer uden at bryde modellens analogi. Target-projektgruppen har løbende kunne ændre i interfaces, benytte andre design-patterns eller udskifte hele komponenter i systemet, ved blot at tage denne med som opgave i næste sprint. Dette er ikke muligt i vandfaldsmodellen. Her kræver det at gruppen på forhånd har fastslået alle designbeslutninger i design-fasen, og der ville derfor ikke være mulighed for lave ændringer løbende. Modellen er derfor på sin vis ufleksibel, men dette kan også være en fordel, da man i target-projektet tydeligere ville kunne følge fremskridt og milepæle, som naturligt genereres ved brug af vandfaldsmodellen.
+
+I valget mellem løsning 2 og 3 må man kigge på hvad target-projektgruppen har opnået ved at starte med et plandrevet forløb. Det store punkt er udviklingen af krav til produktet, men samtidigt må man huske at gruppen har været særdeles glade for deres implementation af Scrum. Spørgsmålet er om gruppen ikke kunne have arbejdet på de ting, som de gjorde plandrevet, i et Scrum-forløb i stedet.
 
 
 \end{document}
