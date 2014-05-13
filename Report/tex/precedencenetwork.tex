@@ -3,10 +3,9 @@
 \graphicspath{{img/}{../img/}}
 
 \section{Precedence Network}
-%Which question does this cover / introduction
-I target-projektet blev et Gantt-chart brugt til aktivitetsplanlægningen, men i dette afsnit vil der blive kigget nærmere på et Precedence Network, som er et alternativ, der ligeledes bruges til at planlægge et projekts aktiviteter og deres relationer. I netværket repræsenteres aktiviteter som knuder, mens forbindelserne mellem disse knuder repræsenterer krav til rækkefølgen. Hver aktivitet har en varighed, og tiden flyder fra venstre mod højre. En knude i netværket har en etiket og 6 værdier (se figur~\ref{fig:precedencenode}). 
+I target-projektet blev der brugt et Gantt-chart til aktivitetsplanlægningen, men i dette afsnit vil der blive kigget nærmere på et Precedence Network, som er et alternativ, der ligeledes bruges til at planlægge et projekts aktiviteter og deres relationer. I netværket repræsenteres aktiviteter som knuder, mens forbindelserne mellem disse knuder repræsenterer krav til rækkefølgen. Hver aktivitet har en varighed, og tiden flyder fra venstre mod højre. En knude i netværket har en etiket og 6 værdier (se figur~\ref{fig:precedencenode}). 
 
-For at kunne lave et Precedence Network skal projektets aktiviteter identificeres. Dette er blevet gjort i afsnit~\ref{sec:Activity Breakdown} om Activity Breakdown. Hver aktivitets varighed estimeres inden den tilføjes til en knude. Når hver aktivitet er repræsenteret af en knude med en varighed, placeres knuderne i den rækkefølge det er nødvendigt, at de bliver udført i. Forbindelserne mellem knuderne viser afhængighederne. Derefter kan de resterende værdier udregnes. Med alle værdier på hver knude i netværket, er det muligt at identificere den \textit{kritiske sti}. \cite[p.~133-151]{hughescotterell09}
+For at kunne lave et Precedence Network skal projektets aktiviteter identificeres. Dette er blevet gjort i afsnit~\ref{sec:Activity Breakdown} om Activity Breakdown. Hver aktivitets varighed estimeres, inden den tilføjes til en knude. Når hver aktivitet er repræsenteret af en knude med en varighed, placeres knuderne i den rækkefølge det er nødvendigt, at de bliver udført i. Forbindelserne mellem knuderne viser afhængighederne. Derefter kan de resterende værdier udregnes. Med alle værdier på hver knude i netværket, er det muligt at identificere den \textit{kritiske sti}. \cite[p.~133-151]{hughescotterell09}
 
 \begin{figure}[H]
 \centering
@@ -16,13 +15,13 @@ For at kunne lave et Precedence Network skal projektets aktiviteter identificere
 \end{figure}
 
 	%Identify the critical path
-Den kritiske sti er stien i netværket, hvor alle aktiviteter på stien har et slæk på 0. En aktivitets slæk dækker over, hvor meget aktiviteten kan rykkes uden at påvirke projektets deadline. Som det ses af Precedence Network diagrammet i figur~\ref{fig:precedencenetwork}, indeholder den kritiske sti (markeret med rød) kun aktiviteter, hvor slækket er netop 0. 
+Den kritiske sti er stien i netværket, hvor alle aktiviteter har et slæk på 0. En aktivitets slæk dækker over, hvor meget aktiviteten kan rykkes uden at påvirke projektets deadline. Som det ses af Precedence Network diagrammet i figur~\ref{fig:precedencenetwork}, indeholder den kritiske sti (markeret med rød) kun aktiviteter, hvor slækket er netop 0. 
 
-Forsinkelser i aktiviteterne på den kritiske vil med stor sandsynlighed forårsage forsinkelser i hele projektet. I forbindelse med projektstyring, er der flere måder, hvorpå target-projektgruppen kunne have forsøgt at forkorte den kritiske sti, således at varigheden på det samlede projekt blev forkortet. Det involverer bl.a. øget brug af ressourcer, reallokering af staben, reducering af scope eller reducering af kvalitet. \cite[p~230]{hughescotterell09}
+Forsinkelser i aktiviteterne på den kritiske sti vil med stor sandsynlighed forårsage forsinkelser i hele projektet. I forbindelse med projektstyring, er der flere måder, hvorpå target-projektgruppen kunne have forsøgt at forkorte den kritiske sti, således at varigheden på det samlede projekt blev forkortet. Det involverer bl.a. øget brug af ressourcer, reallokering af staben, reducering af scope eller reducering af kvalitet. \cite[p~230]{hughescotterell09}
 
 I target-projektet, hvor ressourcerne var meget låste i form af fast deadline og gruppestørrelse, var der ikke samme mulighed for at tilføje ressourcer. Hvis en reducering af scope eller reducering af kvalitet ville undgås, kunne man i stedet have forsøgt at øge bruget af ressourcerne ved at flytte dem fra aktiviteter med et stort slæk til aktiviteterne på den kritiske sti. Da aktiviteter med stort slæk ikke har indflydelse på den samlede varighed af projektet, giver det ingen værdi at forsøge at forkorte disse.
 
-Generelt set opnås tidsbesparelser ved øget parallelisme og fjernelsen af flaskehalse. Med henblik på den anvendte procesmodel i target-projektet (se afsnit~\ref{sec:procesmodeller} om procesmodeller), hvor aktiviteterne løbende nedbrydes til mindre aktiviteter, kan disse mindre aktiviteter muligvis udføres sideløbende. Dette vil altså øge parallelismen på den kritiske sti og dermed forkorte projektets samlede varighed.
+Generelt set opnås tidsbesparelser ved øget parallelisme og fjernelsen af flaskehalse. Med henblik på den anvendte procesmodel i target-projektet (se afsnit~\ref{sec:procesmodeller} om procesmodeller), hvor aktiviteterne løbende nedbrydes til mindre aktiviteter, kan disse mindre aktiviteter muligvis udføres sideløbende. Dette vil øge parallelismen på den kritiske sti og dermed forkorte projektets samlede varighed.
 
 	%A precedence network of our project
 \newgeometry{left=4cm,bottom=1.4cm}
